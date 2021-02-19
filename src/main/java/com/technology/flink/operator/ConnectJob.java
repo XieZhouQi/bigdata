@@ -1,15 +1,10 @@
 package com.technology.flink.operator;
 
-import org.apache.flink.api.common.functions.CoGroupFunction;
-import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.co.CoMapFunction;
-import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows;
-import org.apache.flink.streaming.api.windowing.time.Time;
-import org.apache.flink.util.Collector;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,7 +23,6 @@ public class ConnectJob {
 
         // 连接socket获取输入的数据
         DataStream<String> textStream9000 = env.socketTextStream("127.0.0.1", 9000);
-
 
         // 连接socket获取输入的数据
         DataStream<String> textStream9001 = env.socketTextStream("127.0.0.1", 9100);

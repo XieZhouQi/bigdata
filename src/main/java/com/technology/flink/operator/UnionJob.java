@@ -1,12 +1,7 @@
 package com.technology.flink.operator;
 
-import org.apache.flink.api.common.typeinfo.Types;
-import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.windowing.time.Time;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @description: union可以将多个流合并到一个流中，以便对合并的流进行统一处理。是对多个流的水平拼接。

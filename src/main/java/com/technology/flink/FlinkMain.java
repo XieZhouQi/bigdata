@@ -1,14 +1,9 @@
 package com.technology.flink;
 
 import com.technology.flink.dto.UserBehaviorDto;
-import lombok.val;
-import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.TimeCharacteristic;
-import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.scala.DataStream;
-import org.apache.flink.table.api.EnvironmentSettings;
-import org.apache.flink.table.api.java.StreamTableEnvironment;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;

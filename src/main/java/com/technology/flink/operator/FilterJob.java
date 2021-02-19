@@ -1,9 +1,7 @@
 package com.technology.flink.operator;
 
-import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.util.Collector;
 
 /**
  * @description: filter是进行筛选
