@@ -57,7 +57,7 @@ public class SumJob {
         DataStream<Row> countData = tableEnv.toAppendStream(dataTable, Row.class);
 
         System.out.println("开始打印统计数据");
-       // countData.print();
+         countData.print();
         System.out.println("结束打印统计数据");
         // execute program
         env.execute("Flink Streaming Java API Skeleton");

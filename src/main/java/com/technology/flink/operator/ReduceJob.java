@@ -35,6 +35,7 @@ public class ReduceJob {
                 //指定窗口，每10秒个计算一次
                 .timeWindow(Time.of(10, TimeUnit.SECONDS))
                 //对每一组内的元素进行归并操作，即第一个和第二个归并，结果再与第三个归并...
+//                .reduce((Tuple2<String, Integer> t1, Tuple2<String, Integer> t2) -> new Tuple2(t1.f0, t1.f1 + t2.f1));
                 .reduce((Tuple2<String, Integer> t1, Tuple2<String, Integer> t2) -> new Tuple2(t1.f0, t1.f1 + t2.f1));
 
 
